@@ -8,6 +8,8 @@ import Loader from "./components/Loader";
 function App() {
   const [location, setLocation] = useState(null);
 
+  const [loader, setLoader] = useState(true)
+  
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/location/${getRandomNumber(126)}`)
@@ -15,9 +17,15 @@ function App() {
       .catch((error) => console.log(error));
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 2000); 
+  }, []);
+
   return (
     <main className="min-h-full  text-white font-['Fira_Code']">
-      {location === null ? (
+      {loader ? (
         <Loader />
       ) : (
         <>
