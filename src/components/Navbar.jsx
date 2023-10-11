@@ -39,7 +39,7 @@ const handleChanged= (value) =>{
   return (
     <section className="grid p-4 place-items-center">
       
-        <form onSubmit={handleSubmit} className="p-4 flex gap-4 justify-around border-[#8EFF8B] border-2  w-[300px] md:w-[500px] ">
+        <form onSubmit={handleSubmit} className="p-4 flex gap-4 justify-around border-[#8EFF8B] border-2   ">
           <input required onChange={(e) => handleChanged(e.target.value)} name="idLocation"  className="bg-transparent  outline-none " autoComplete="none" placeholder="Search New dimension" />
           <button className="flex gap-2 items-center">
             <IconSearch size={20} />{" "}
@@ -50,14 +50,14 @@ const handleChanged= (value) =>{
 
       {/* lOCATION INFORMATION */}
 
-      <article className="border-[rgb(142,255,139)] border-2  grid gap-4 p-10 md:w-[760px] transition-all">
+      <article className="border-[rgb(142,255,139)] border-2  grid gap-4 p-10 w-[min(100%,_800px)] transition-all">
             <h4 className="text-center text-[#8EFF8B] text-2xl ">
               Welcome to {location?.name}
             </h4>
             <ul className=" flex flex-col md:flex-row justify-around gap-4 text-center text-[#938686] ">
               <li className="flex flex-col md:flex-row gap-2">Type: <span>  {location?.type}</span></li>
               <li className="flex flex-col md:flex-row gap-2">Dimension: <span> {location?.dimension}</span> </li>
-              <li className="flex flex-col md:flex-row gap-2">Population: <span> </span> </li>
+              <li className="flex flex-col md:flex-row gap-2">Population: <span> {location?.residents.length} </span> </li>
             </ul>
       </article>
     </section>
