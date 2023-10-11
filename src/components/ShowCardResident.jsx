@@ -2,7 +2,6 @@ import { IconCircleLetterX } from "@tabler/icons-react";
 import { characterStatus } from "../constants/CirculeStatus";
 
 function ShowCardResident({ residentCard, setShowCard }) {
-  console.log(residentCard);
   return (
     <>
       <section className="bg-black opacity-70 min-h-screen"></section>

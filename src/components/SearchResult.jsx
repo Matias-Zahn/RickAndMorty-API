@@ -2,6 +2,7 @@ function SearchResult({resultSearch, setLocation}) {
 
   const handleChangedDimension= (value) => {
     setLocation(value)
+    console.log(value);
   }
 
   return (

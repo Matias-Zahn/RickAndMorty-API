@@ -4,22 +4,22 @@ import SearchResult from "./SearchResult";
 import { useState } from "react";
 
 function Navbar({ location, setLocation }) {
+  const [allData, setAllData] = useState([])
+  
+  const [resultSearch, setResultSearch] = useState([])
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     const valueInput= e.target.idLocation.value
-
-
-    axios.get(`https://rickandmortyapi.com/api/location/${valueInput}`)
-      .then(({data}) => setLocation(data))
+    
+    axios.get(`https://rickandmortyapi.com/api/location/?name=${valueInput}`)
+      .then(({data}) => {
+        setLocation(data.results[0])
+        e.target.reset()
+      })
       .catch((error) => console.log(error))
   };
-
- 
-
-const [allData, setAllData] = useState([])
-
-const [resultSearch, setResultSearch] = useState([])
 
 const fetchData = (value) => {
   axios.get('https://rickandmortyapi.com/api/location')
@@ -40,7 +40,7 @@ const handleChanged= (value) =>{
     <section className="grid p-4 place-items-center">
       
         <form onSubmit={handleSubmit} className="p-4 flex gap-4 justify-around border-[#8EFF8B] border-2  w-[300px] md:w-[500px] ">
-          <input onChange={(e) => handleChanged(e.target.value)} name="idLocation"  className="bg-transparent  outline-none " autoComplete="none" placeholder="Search New dimension" />
+          <input required onChange={(e) => handleChanged(e.target.value)} name="idLocation"  className="bg-transparent  outline-none " autoComplete="none" placeholder="Search New dimension" />
           <button className="flex gap-2 items-center">
             <IconSearch size={20} />{" "}
           </button>
@@ -57,7 +57,7 @@ const handleChanged= (value) =>{
             <ul className=" flex flex-col md:flex-row justify-around gap-4 text-center text-[#938686] ">
               <li className="flex flex-col md:flex-row gap-2">Type: <span>  {location?.type}</span></li>
               <li className="flex flex-col md:flex-row gap-2">Dimension: <span> {location?.dimension}</span> </li>
-              <li className="flex flex-col md:flex-row gap-2">Population: <span> {location?.residents.length}</span> </li>
+              <li className="flex flex-col md:flex-row gap-2">Population: <span> </span> </li>
             </ul>
       </article>
     </section>
