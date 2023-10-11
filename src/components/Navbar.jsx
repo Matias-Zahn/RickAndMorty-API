@@ -39,8 +39,8 @@ const handleChanged= (value) =>{
   return (
     <section className="grid p-4 place-items-center">
       
-        <form onSubmit={handleSubmit} className="p-4 flex gap-4 justify-around border-[#8EFF8B] border-2   ">
-          <input required onChange={(e) => handleChanged(e.target.value)} name="idLocation"  className="bg-transparent  outline-none " autoComplete="none" placeholder="Search New dimension" />
+        <form onSubmit={handleSubmit} className="p-4 flex gap-4 justify-around border-[#8EFF8B] border-2  w-[min(100%,_500px)] ">
+          <input required onChange={(e) => handleChanged(e.target.value)} name="idLocation"  className="bg-transparent   outline-none " autoComplete="none" placeholder="Search New dimension" />
           <button className="flex gap-2 items-center">
             <IconSearch size={20} />{" "}
           </button>
@@ -50,7 +50,7 @@ const handleChanged= (value) =>{
 
       {/* lOCATION INFORMATION */}
 
-      <article className="border-[rgb(142,255,139)] border-2  grid gap-4 p-10 w-[min(100%,_800px)] transition-all">
+      <article className="border-[rgb(142,255,139)] border-2  grid gap-4 p-10 w-[min(100%,_900px)] transition-all">
             <h4 className="text-center text-[#8EFF8B] text-2xl ">
               Welcome to {location?.name}
             </h4>
