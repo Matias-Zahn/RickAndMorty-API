@@ -40,7 +40,7 @@ const handleChanged= (value) =>{
     <section className="grid p-4 place-items-center">
       
         <form onSubmit={handleSubmit} className="p-4 flex gap-4 justify-around border-[#8EFF8B] border-2  w-[min(100%,_500px)] ">
-          <input required onChange={(e) => handleChanged(e.target.value)} name="idLocation"  className="bg-transparent   outline-none " autoComplete="none" placeholder="Search New dimension" />
+          <input required onChange={(e) => handleChanged(e.target.value)} name="idLocation"  className="bg-transparent   outline-none " autoComplete="off" placeholder="Search New dimension" />
           <button className="flex gap-2 items-center">
             <IconSearch size={20} />{" "}
           </button>
