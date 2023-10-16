@@ -46,12 +46,9 @@ function ResidentCard({ residentEndPont }) {
           </ul>
         </div>
       </article>
-      {
-        ShowCard && (
-          <div className="fixed top-[0%] right-[0%] min-h-screen min-w-[100%]  z-10 overflow-hidden ">
+          <div className={`fixed top-[0%] right-[0%] min-h-screen min-w-[100%]  z-10 overflow-hidden transition-all duration-300 ${ShowCard ? "visible opacity-100" : "invisible opacity-0"}`}>
             <ShowCardResident residentCard={resident} setShowCard={setShowCard} />
           </div>
-      )} 
     </>
   );
 }

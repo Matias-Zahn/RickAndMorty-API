@@ -5,7 +5,7 @@ function ShowCardResident({ residentCard, setShowCard }) {
   return (
     <>
       <section className="bg-black opacity-70 min-h-screen"></section>
-      <section className={`absolute bottom-[20%] left-[50%] -translate-x-[50%] border-2 border-[#8EFF8B] z-20`}>
+      <section className='absolute bottom-[20%] left-[50%] -translate-x-[50%] border-2 border-[#8EFF8B] z-20'>
         <IconCircleLetterX
           size={40}
           className="absolute top-[-10%] left-[95%] cursor-pointer hover:bg-green-500 rounded-full transition-colors "
