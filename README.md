@@ -44,10 +44,3 @@ Welcome to the Rick and Morty API Page! This simple web application allows you t
 ## Resources
 
 - [Rick and Morty API Documentation](https://rickandmortyapi.com/documentation)
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Spotify Web API
