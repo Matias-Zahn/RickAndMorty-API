@@ -8,8 +8,8 @@ import Loader from "./components/Loader";
 function App() {
   const [location, setLocation] = useState(null);
 
-  const [loader, setLoader] = useState(true)
-  
+  const [loader, setLoader] = useState(true);
+
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/location/${getRandomNumber(126)}`)
@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 2000); 
+    }, 2000);
   }, []);
 
   return (
@@ -40,7 +40,7 @@ function App() {
             <Navbar location={location} setLocation={setLocation} />
           </section>
 
-          <section className="bg-[url(/bg/background.svg)] min-h-screen bg-center bg-cover">
+          <section className="bg-[url(/bg/pageBackground.png)] bg-no-repeat bg-cover h-screen overflow-y-auto">
             <Residents residents={location?.residents ?? []} />
           </section>
         </>
