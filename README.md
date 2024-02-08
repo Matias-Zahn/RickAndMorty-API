@@ -8,6 +8,16 @@ Welcome to the Rick and Morty API Page! This simple web application allows you t
 - **Episode Details**: Discover details about different episodes, including their air date, characters, and more.
 - **Location Insights**: Learn about different locations featured in the series.
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- React
+- TailwindCSS
+- Axios
+- Rick and Morty API
+
 ## Usage
 
 1. Clone this repository to your local machine.
@@ -34,3 +44,10 @@ Welcome to the Rick and Morty API Page! This simple web application allows you t
 ## Resources
 
 - [Rick and Morty API Documentation](https://rickandmortyapi.com/documentation)
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Spotify Web API
